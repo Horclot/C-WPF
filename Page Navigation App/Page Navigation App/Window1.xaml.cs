@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using static System.Net.Mime.MediaTypeNames;
 
+
 namespace Page_Navigation_App
 {
    
@@ -34,10 +35,26 @@ namespace Page_Navigation_App
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            
             string name = nameReg.Text;
             string email = emailReg.Text;
             string password = passReg.Password;
+            int id = 0;
+            Random random = new Random(); 
+            random.NextInt64();
+            id = random.Next(1,10000);
+            using (var context = new ApplicationDbContext())
+            {
+                var newUser = new User
+                {
+                    Id = id,
+                    Name = name,
+                    Email = email,
+                    Password = password
+                };
+
+                context.Users.Add(newUser);
+                context.SaveChanges();
+            }
 
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
