@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using static System.Net.Mime.MediaTypeNames;
+using System.Security.Cryptography;
 
 
 namespace Page_Navigation_App
@@ -38,12 +39,34 @@ namespace Page_Navigation_App
             string name = nameReg.Text;
             string email = emailReg.Text;
             string password = passReg.Password;
-            int id = 0;
-            Random random = new Random(); 
-            random.NextInt64();
-            id = random.Next(1,10000);
+
             using (var context = new ApplicationDbContext())
             {
+                // Проверка наличия имени пользователя в базе данных
+                if (context.Users.Any(u => u.Name == name))
+                {
+                    // Имя пользователя уже существует, обработайте ошибку или выведите сообщение
+                    MessageBox.Show("Данный пользователь уже зарегистрирован.");
+                    return; // Завершите метод
+                }
+
+                // Проверка наличия email в базе данных
+                if (context.Users.Any(u => u.Email == email))
+                {
+                    // Email уже существует, обработайте ошибку или выведите сообщение
+                    MessageBox.Show("Данный email уже зарегистрирован.");
+                    return; // Завершите метод
+                }
+
+                int id;
+                do
+                {
+                    // Генерируем случайный ID и проверяем его уникальность
+                    Random random = new Random();
+                    id = random.Next(1, 999999999);
+                }
+                while (context.Users.Any(u => u.Id == id));
+
                 var newUser = new User
                 {
                     Id = id,
@@ -60,7 +83,7 @@ namespace Page_Navigation_App
             mainWindow.Show();
             this.Close();
         }
-
+        
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
                 Window2 window2 = new Window2();
