@@ -306,7 +306,6 @@ C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App
 C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\View\Customers.g.cs
 C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\View\Home.g.cs
 C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\View\Orders.g.cs
-C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\View\Products.g.cs
 C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\View\Settings.g.cs
 C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\View\Shipments.g.cs
 C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\View\Transactions.g.cs
@@ -323,7 +322,6 @@ C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App
 C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\View\Customers.baml
 C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\View\Home.baml
 C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\View\Orders.baml
-C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\View\Products.baml
 C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\View\Settings.baml
 C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\View\Shipments.baml
 C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\View\Transactions.baml
@@ -370,3 +368,5 @@ C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App
 C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\bin\Debug\net6.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
 C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\View\Products.g.cs
+C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\View\Products.baml

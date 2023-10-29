@@ -20,27 +20,34 @@ namespace Page_Navigation_App.View
     {
         public string Name { get; set; }
         public double Price { get; set; }
+        public string ImagePath { get; set; }
     }
-    
+
     public partial class Products : UserControl
     {
-        private ObservableCollection<Product> products = new ObservableCollection<Product>();
+        public ObservableCollection<Product> Product { get; set; } = new ObservableCollection<Product>();
         public Products()
         {
-            InitializeComponent();
-            productListView.ItemsSource = products;
-            // Заполните список товаров
-            products.Add(new Product { Name = "Товар 1", Price = 10.99 });
-            products.Add(new Product { Name = "Товар 2", Price = 15.49 });
+            InitializeComponent();  
+            Product = new ObservableCollection<Product>();
+            // Добавьте товары в коллекцию Products
+            Product.Add(new Product { Name = "ServerApp", Price = 144.00, ImagePath = "C:\\Users\\diana\\OneDrive\\Рабочий стол\\GitHub\\C-WPF\\Page Navigation App\\Page Navigation App\\Images\\invent1.png" });
+            Product.Add(new Product { Name = "ServerApp", Price = 144.00, ImagePath = "C:\\Users\\diana\\OneDrive\\Рабочий стол\\GitHub\\C-WPF\\Page Navigation App\\Page Navigation App\\Images\\invent1.png" });
+            Product.Add(new Product { Name = "ServerApp", Price = 144.00, ImagePath = "C:\\Users\\diana\\OneDrive\\Рабочий стол\\GitHub\\C-WPF\\Page Navigation App\\Page Navigation App\\Images\\invent1.png" });
+            Product.Add(new Product { Name = "ServerApp", Price = 144.00, ImagePath = "C:\\Users\\diana\\OneDrive\\Рабочий стол\\GitHub\\C-WPF\\Page Navigation App\\Page Navigation App\\Images\\invent1.png" });
+            Product.Add(new Product { Name = "ServerApp", Price = 144.00, ImagePath = "C:\\Users\\diana\\OneDrive\\Рабочий стол\\GitHub\\C-WPF\\Page Navigation App\\Page Navigation App\\Images\\invent1.png" });
+            Product.Add(new Product { Name = "ServerApp", Price = 144.00, ImagePath = "C:\\Users\\diana\\OneDrive\\Рабочий стол\\GitHub\\C-WPF\\Page Navigation App\\Page Navigation App\\Images\\invent1.png" });
+
+            // Добавьте другие товары
+            DataContext = this;
         }
 
-        private void AddToCart_Click(object sender, RoutedEventArgs e)
+        private void BuyButton_Click(object sender, RoutedEventArgs e)
         {
-            // Обработка нажатия кнопки "В корзину"
             var button = (Button)sender;
             var product = (Product)button.Tag;
-            // Добавьте товар в корзину
-            // Можете использовать свой собственный код для управления корзиной
+            // Обработка нажатия кнопки "Купить"
+            MessageBox.Show("ДА!");
         }
     }
 }
