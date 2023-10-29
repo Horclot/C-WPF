@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace Page_Navigation_App
 {
@@ -28,17 +29,30 @@ namespace Page_Navigation_App
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            if ((emailLogin.Text != "") || (passLogin.Password != ""))
+            string email = emailLogin.Text;
+            string password = passLogin.Password;
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) || !email.Contains("@"))
             {
-                MainWindow mainwindow = new MainWindow();
-                mainwindow.Show();
-                this.Close();
+                MessageBox.Show("Ошибка заполнения данных", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
             {
-                MessageBox.Show("Ошибка данных, проверьте введённые данные", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                using (var context = new ApplicationDbContext())
+                {
+                    if (context.Users.Any(u => u.Email == email && u.Password == password))
+                    {
+                        MainWindow mainWindow = new MainWindow();
+                        mainWindow.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Неверный email или пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
             }
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
