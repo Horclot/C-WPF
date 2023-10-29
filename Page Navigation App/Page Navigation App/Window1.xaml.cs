@@ -57,9 +57,10 @@ namespace Page_Navigation_App
                         id = random.Next(1, 999999999);
                     }
                     while (context.Users.Any(u => u.Id == id));
-
+                    SharedData.Id = id;
                     var newUser = new User
                     {
+                      
                         Id = id,
                         Name = name,
                         Email = email,
@@ -69,7 +70,8 @@ namespace Page_Navigation_App
                     context.Users.Add(newUser);
                     context.SaveChanges();
                 }
-
+                SharedData.Name = name;
+                SharedData.Email = email;
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
                 this.Close();

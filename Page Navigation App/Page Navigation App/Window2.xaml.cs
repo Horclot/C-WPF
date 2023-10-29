@@ -39,8 +39,13 @@ namespace Page_Navigation_App
             {
                 using (var context = new ApplicationDbContext())
                 {
-                    if (context.Users.Any(u => u.Email == email && u.Password == password))
+                    var user = context.Users.FirstOrDefault(u => u.Email == email && u.Password == password);
+
+                    if (user != null)
                     {
+                        SharedData.Email = email;
+                        SharedData.Id = user.Id; // Предположим, что у вас есть свойство Id в классе User
+                        SharedData.Name = user.Name; // Добавляем имя пользователя
                         MainWindow mainWindow = new MainWindow();
                         mainWindow.Show();
                         this.Close();
@@ -52,6 +57,7 @@ namespace Page_Navigation_App
                 }
             }
         }
+
 
 
         private void Button_Click(object sender, RoutedEventArgs e)

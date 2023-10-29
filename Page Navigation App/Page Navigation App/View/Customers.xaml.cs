@@ -23,6 +23,13 @@ namespace Page_Navigation_App.View
         public Customers()
         {
             InitializeComponent();
+            int idFromWindow1 = SharedData.Id;
+            string id = idFromWindow1.ToString();
+            string name = SharedData.Name;
+            string email = SharedData.Email;
+            TextName.Content = "Name: " + name;
+            TextEmail.Content = "Email: " + email;
+            textId.Content = "id: " + SharedData.Id;
         }
     }
 }
