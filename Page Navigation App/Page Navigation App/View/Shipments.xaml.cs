@@ -23,6 +23,27 @@ namespace Page_Navigation_App.View
         public Shipments()
         {
             InitializeComponent();
+
+            int id = SharedData.Id;
+            using (var context = new ApplicationDbCart())
+            {
+                var user = context.Cart.FirstOrDefault(u => u.UserId == id);
+                //if (user != null)
+                //{
+
+
+                //}
+                //else
+                //{
+                    
+               // }
+                
+            }
+
+
         }
+
+
     }
+        
 }

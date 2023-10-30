@@ -49,22 +49,26 @@ namespace Page_Navigation_App.View
         {
             var button = (Button)sender;
             var product = (Product)button.Tag;
-            int id = product.Id;
-            int price = product.Price;
+            
 
             using (var context = new ApplicationDbCart())
             {
+                int id = product.Id;
+                int price = product.Price;
                 var newCartP = new CartP
                 {
+
                     UserId = SharedData.Id, // Подставьте значение пользователя
                     CartId = id,
                     Count = 1,
                     Price = price,
                 };
-                context.Carts.Add(newCartP);
+                context.Cart.Add(newCartP);
                 context.SaveChanges();
                 
+                
             }
+            Product.Remove(product);
         }
     }
 }
