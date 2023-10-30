@@ -9,12 +9,55 @@
              d:DesignWidth="622"
              Style="{StaticResource Page_Style}">
 
-    <UserControl.DataContext>
-        <vm:ShipmentVM />
-    </UserControl.DataContext>
-    
-    <Grid Margin="15">
+        <UserControl.Resources>
+        <Style x:Key="BuyButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="120" />
+            <Setter Property="Height" Value="35" />
+            <Setter Property="Background" Value="#FF272B2F" />
+            <Setter Property="BorderBrush" Value="#FF0BCDFF" />
+            <Setter Property="Foreground" Value="#FF0BCDFF" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Content" Value="Remove" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
 
-        <Grid/>
+    <UserControl.DataContext>
+        <vm:ProductVM />
+    </UserControl.DataContext>
+
+    <Grid Margin="15">
+        <ItemsControl ItemsSource="{Binding Product}" Margin="0,20,0,0">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border  Margin="20,0,20,5">
+                        <StackPanel>
+                            <Image Source="{Binding ImagePath}" Width="150" Height="150" />
+                            <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" Foreground="#FF0BCDFF" FontSize="22px" FontFamily="Rubik" />
+                            <TextBlock Text="{Binding Price, StringFormat='{}${0:F2}'}" HorizontalAlignment="Center" Foreground="#FF0BCDFF" FontSize="18px" FontFamily="Rubik" />
+                            <Button Style="{StaticResource BuyButtonStyle}" Click="BuyButton_Click1" Tag="{Binding}" />
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </Grid>
 </UserControl>
