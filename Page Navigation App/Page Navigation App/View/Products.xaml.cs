@@ -34,12 +34,12 @@ namespace Page_Navigation_App.View
             InitializeComponent();  
             Product = new ObservableCollection<Product>();
             // Добавьте товары в коллекцию Products
-            Product.Add(new Product { Name = "ServerApp", Price = 350, ImagePath = "C:\\Users\\diana\\OneDrive\\Рабочий стол\\GitHub\\C-WPF\\Page Navigation App\\Page Navigation App\\Images\\invent1.png", Id = 1 });
-            Product.Add(new Product { Name = "Social network", Price = 200, ImagePath = "C:\\Users\\diana\\OneDrive\\Рабочий стол\\GitHub\\C-WPF\\Page Navigation App\\Page Navigation App\\Images\\invent2.png", Id = 2 });
-            Product.Add(new Product { Name = "Your idea", Price = 5000, ImagePath = "C:\\Users\\diana\\OneDrive\\Рабочий стол\\GitHub\\C-WPF\\Page Navigation App\\Page Navigation App\\Images\\invent3.png", Id = 3 });
-            Product.Add(new Product { Name = "Optimized", Price = 400, ImagePath = "C:\\Users\\diana\\OneDrive\\Рабочий стол\\GitHub\\C-WPF\\Page Navigation App\\Page Navigation App\\Images\\invent4.png", Id = 4 });
-            Product.Add(new Product { Name = "Simple app", Price = 200, ImagePath = "C:\\Users\\diana\\OneDrive\\Рабочий стол\\GitHub\\C-WPF\\Page Navigation App\\Page Navigation App\\Images\\invent5.png", Id = 5 });
-            Product.Add(new Product { Name = "Premium app", Price = 800, ImagePath = "C:\\Users\\diana\\OneDrive\\Рабочий стол\\GitHub\\C-WPF\\Page Navigation App\\Page Navigation App\\Images\\invent6.png", Id = 6 });
+            Product.Add(new Product { Name = "Database", Price = 300, ImagePath = "C:\\Users\\diana\\OneDrive\\Рабочий стол\\GitHub\\C-WPF\\Page Navigation App\\Page Navigation App\\Images\\invent1.png", Id = 1 });
+            Product.Add(new Product { Name = "Optimization", Price = 200, ImagePath = "C:\\Users\\diana\\OneDrive\\Рабочий стол\\GitHub\\C-WPF\\Page Navigation App\\Page Navigation App\\Images\\invent2.png", Id = 2 });
+            Product.Add(new Product { Name = "Server", Price = 500, ImagePath = "C:\\Users\\diana\\OneDrive\\Рабочий стол\\GitHub\\C-WPF\\Page Navigation App\\Page Navigation App\\Images\\invent3.png", Id = 3 });
+            Product.Add(new Product { Name = "Security", Price = 200, ImagePath = "C:\\Users\\diana\\OneDrive\\Рабочий стол\\GitHub\\C-WPF\\Page Navigation App\\Page Navigation App\\Images\\invent4.png", Id = 4 });
+            Product.Add(new Product { Name = "Scalability", Price = 200, ImagePath = "C:\\Users\\diana\\OneDrive\\Рабочий стол\\GitHub\\C-WPF\\Page Navigation App\\Page Navigation App\\Images\\invent5.png", Id = 5 });
+            Product.Add(new Product { Name = "Convenience", Price = 250, ImagePath = "C:\\Users\\diana\\OneDrive\\Рабочий стол\\GitHub\\C-WPF\\Page Navigation App\\Page Navigation App\\Images\\invent6.png", Id = 6 });
 
             // Добавьте другие товары
             DataContext = this;
@@ -68,6 +68,7 @@ namespace Page_Navigation_App.View
                 
                 
             }
+
             Product.Remove(product);
         }
     }
