@@ -9,6 +9,7 @@
       "Page Navigation App/1.0.0": {
         "dependencies": {
           "Microsoft.Data.Sqlite": "7.0.13",
+          "Microsoft.EntityFrameworkCore": "7.0.13",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.13",
           "System.Data.SQLite": "1.0.118",
           "System.Data.SQLite.Core": "1.0.118"
