@@ -1,10 +1,10 @@
 ﻿<Window x:Class="Page_Navigation_App.Window2"
          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Width="500" Height="500" 
-    WindowStyle="None"
-    AllowsTransparency="True"
-     ResizeMode="NoResize">
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         Width="500" Height="500" 
+         WindowStyle="None"
+         AllowsTransparency="True"
+         ResizeMode="NoResize">
 
     <Grid
         Background="#272B2F" HorizontalAlignment="Stretch" Width="NaN"

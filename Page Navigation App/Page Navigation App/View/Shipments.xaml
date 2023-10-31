@@ -9,9 +9,9 @@
              d:DesignWidth="622"
              Style="{StaticResource Page_Style}">
 
-        <UserControl.Resources>
+    <UserControl.Resources>
         <Style x:Key="BuyButtonStyle" TargetType="Button">
-            <Setter Property="Width" Value="120" />
+            <Setter Property="Width" Value="80" />
             <Setter Property="Height" Value="35" />
             <Setter Property="Background" Value="#FF272B2F" />
             <Setter Property="BorderBrush" Value="#FF0BCDFF" />
@@ -40,7 +40,7 @@
     </UserControl.DataContext>
 
     <Grid Margin="15">
-        <ItemsControl ItemsSource="{Binding Product}" Margin="0,20,0,0">
+        <ItemsControl ItemsSource="{Binding Product}" Margin="57,118,57,103">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel Orientation="Horizontal" />
@@ -50,7 +50,7 @@
                 <DataTemplate>
                     <Border  Margin="20,0,20,5">
                         <StackPanel>
-                            <Image Source="{Binding ImagePath}" Width="150" Height="150" />
+                            <Image Source="{Binding ImagePath}" Width="75" Height="75" />
                             <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" Foreground="#FF0BCDFF" FontSize="22px" FontFamily="Rubik" />
                             <TextBlock Text="{Binding Price, StringFormat='{}${0:F2}'}" HorizontalAlignment="Center" Foreground="#FF0BCDFF" FontSize="18px" FontFamily="Rubik" />
                             <Button Style="{StaticResource BuyButtonStyle}" Click="BuyButton_Click1" Tag="{Binding}" />
@@ -59,5 +59,9 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
+        <Button Content="Design" HorizontalAlignment="Center" Margin="0,516,0,0" VerticalAlignment="Top" Height="44" Width="152" Style="{StaticResource BuyButtonStyle}" Click="Button_Click" />
+        <Label Content="Your application will consist of these parameters" HorizontalAlignment="Center" Margin="0,83,0,0" VerticalAlignment="Top" Foreground="#FF0BCDFF" FontSize="15"/>
+        <Label Content="Your cart" HorizontalAlignment="Center" Margin="0,28,0,0" VerticalAlignment="Top" Foreground="#FF0BCDFF" FontSize="24"/>
+
     </Grid>
 </UserControl>

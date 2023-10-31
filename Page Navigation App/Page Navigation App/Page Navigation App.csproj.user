@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\CartAccept.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\Customers.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -52,6 +55,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Utilities\DataTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CartAccept.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Customers.xaml">

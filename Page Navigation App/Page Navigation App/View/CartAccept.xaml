@@ -1,0 +1,19 @@
+﻿<Window x:Class="Page_Navigation_App.View.CartAccept"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Page_Navigation_App.View"
+        Width="500" Height="500" 
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="NoResize">
+    <Grid Background="#272B2F" HorizontalAlignment="Stretch" Width="NaN" >
+        <Label Content="Purchase Confirmation" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="22" FontFamily="Rubik" Foreground="#FF0BCDFF"/>
+        <Button x:Name="button" Margin="276,430,24,30" BorderThickness="1,2,1,1" Background="#FF0BCDFF" FontSize="22" FontFamily="Rubik" Foreground="#FF272B2F" BorderBrush="#FF272B2F" Click="Button_Click_1">
+            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
+        </Button>
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="24,430,0,30" Width="200" BorderThickness="1,2,1,1" Background="#FF0BCDFF" FontSize="22" FontFamily="Rubik" Foreground="#FF272B2F" BorderBrush="#FF272B2F" Click="Button_Click_1"/>
+        <TextBlock x:Name="TextAccept" HorizontalAlignment="Center" Margin="0,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="350" Width="452" Foreground="#FF0BCDFF" FontSize="18"/>
+    </Grid>
+</Window>

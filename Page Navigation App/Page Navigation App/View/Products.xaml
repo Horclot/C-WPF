@@ -40,7 +40,7 @@
     </UserControl.DataContext>
 
     <Grid Margin="15">
-        <ItemsControl ItemsSource="{Binding Product}" Margin="0,20,0,0">
+        <ItemsControl ItemsSource="{Binding Product}" Margin="0,67,0,0">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel Orientation="Horizontal" />
@@ -59,5 +59,7 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
+        <Label HorizontalAlignment="Left" Margin="268,24,0,0" VerticalAlignment="Top"/>
+        <Label Content="Add options for your application" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="#FF0BCDFF" FontSize="24"/>
     </Grid>
 </UserControl>

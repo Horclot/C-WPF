@@ -87,6 +87,11 @@ namespace Page_Navigation_App.View
             Product.Remove(product);
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            CartAccept cartAccept = new CartAccept();
+            cartAccept.Show();
+        }
     }
 
 
