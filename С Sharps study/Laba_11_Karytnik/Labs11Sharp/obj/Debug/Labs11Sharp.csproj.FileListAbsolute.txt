@@ -1,0 +1,7 @@
+C:\Users\diana\OneDrive\Рабочий стол\Labs11Sharp\Labs11Sharp\bin\Debug\Labs11Sharp.exe.config
+C:\Users\diana\OneDrive\Рабочий стол\Labs11Sharp\Labs11Sharp\bin\Debug\Labs11Sharp.exe
+C:\Users\diana\OneDrive\Рабочий стол\Labs11Sharp\Labs11Sharp\bin\Debug\Labs11Sharp.pdb
+C:\Users\diana\OneDrive\Рабочий стол\Labs11Sharp\Labs11Sharp\obj\Debug\Labs11Sharp.csproj.AssemblyReference.cache
+C:\Users\diana\OneDrive\Рабочий стол\Labs11Sharp\Labs11Sharp\obj\Debug\Labs11Sharp.csproj.CoreCompileInputs.cache
+C:\Users\diana\OneDrive\Рабочий стол\Labs11Sharp\Labs11Sharp\obj\Debug\Labs11Sharp.exe
+C:\Users\diana\OneDrive\Рабочий стол\Labs11Sharp\Labs11Sharp\obj\Debug\Labs11Sharp.pdb
