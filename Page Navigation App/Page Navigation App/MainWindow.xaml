@@ -46,7 +46,13 @@
                   Width="228">
 
                 <Border Background="#272B2F"
-                        CornerRadius="20,0,0,20" />
+                        CornerRadius="20,0,0,20" >
+                    <Rectangle Margin="14,-52,14,452" Width="200" Height="200">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/logo1.png"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </Border>
 
                 <StackPanel Height="400"
                             Width="228">
@@ -159,21 +165,6 @@
                     </Menu:Btn>
 
                     <!--// Settings //-->
-
-                    <Menu:Btn Style="{StaticResource BtnStyle}"
-                              Command="{Binding SettingsCommand}">
-
-                        <Grid>
-
-                            <Image Source="Images/img_setting.png"
-                                   Style="{StaticResource Image_Style}" />
-
-                            <TextBlock Text="Settings"
-                                       Style="{StaticResource Text_Style}" />
-
-                        </Grid>
-
-                    </Menu:Btn>
 
                 </StackPanel>
 

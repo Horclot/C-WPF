@@ -12,10 +12,14 @@
     <UserControl.DataContext>
         <vm:TransactionVM />
     </UserControl.DataContext>
-    
+
     <Grid Margin="15">
 
-        <Grid/>
+        <Grid>
+            <ScrollViewer>
+                <TextBlock x:Name="SupportText" TextWrapping="Wrap" Text="text" Foreground="#FF0BCDFF" Width="556" Height="1393" FontFamily="Rubik" FontSize="18" TextAlignment="Center"/>
+            </ScrollViewer>
+        </Grid>
 
     </Grid>
 </UserControl>

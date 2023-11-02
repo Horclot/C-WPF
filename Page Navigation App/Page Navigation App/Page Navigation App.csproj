@@ -28,6 +28,8 @@
     <None Remove="Images\shutdown_def.png" />
     <None Remove="Images\shutdown_mo.png" />
     <None Remove="Images\transaction_page.png" />
+    <None Remove="logo.png" />
+    <None Remove="logo1.png" />
     <None Remove="View\user.jpg" />
   </ItemGroup>
 
@@ -38,6 +40,8 @@
     <Resource Include="Fonts\Rubik-Regular.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="logo.png" />
+    <Resource Include="logo1.png" />
     <Resource Include="View\user.jpg" />
     <Content Include="Images\home_page.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
