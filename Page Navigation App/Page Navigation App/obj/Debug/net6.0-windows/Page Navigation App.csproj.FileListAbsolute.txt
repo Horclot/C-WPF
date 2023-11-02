@@ -487,5 +487,3 @@ C:\Users\horcl\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App
 C:\Users\horcl\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\Page Navigation App.pdb
 C:\Users\horcl\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\Page Navigation App.genruntimeconfig.cache
 C:\Users\horcl\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\ref\Page Navigation App.dll
-C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\View\CartAccept.g.cs
-C:\Users\diana\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\View\CartAccept.baml

@@ -18,11 +18,15 @@ namespace Page_Navigation_App.View
 {
     public partial class Shipments : UserControl
     {
+        int sum = 0;
         public ObservableCollection<Product> Product { get; set; } = new ObservableCollection<Product>();
 
         public Shipments()
         {
+
             InitializeComponent();
+
+            
 
             Product = new ObservableCollection<Product>();
 
@@ -34,6 +38,7 @@ namespace Page_Navigation_App.View
                 // Добавляем только те продукты, которые соответствуют условию
                 foreach (var productFromDb in productsFromDb)
                 {
+                    sum = sum + productFromDb.price;
                     Product.Add(new Product
                     {
                         Id = productFromDb.id,
@@ -43,7 +48,7 @@ namespace Page_Navigation_App.View
                     });
                 }
             }
-
+            sumPriceText.Content = "Total: " + sum + "$";
             DataContext = this;
         }
         private void BuyButton_Click1(object sender, RoutedEventArgs e)
@@ -83,15 +88,58 @@ namespace Page_Navigation_App.View
 
                 content.SaveChanges();
             }
-
+            
+            sum = sum - product.Price;
+            sumPriceText.Content = "Total: " + sum + "$";
             Product.Remove(product);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            CartAccept cartAccept = new CartAccept();
-            cartAccept.Show();
+            using (var contextItem = new ApplicationDbItem())
+            {
+                using (var contextHistory = new ApplicationDbHistory())
+                {
+                    // Проверяем наличие продуктов с состоянием state = 1 в базе данных
+                    var cartItems = contextItem.Item.Where(item => item.state == 1).ToList();
+
+                    if (cartItems.Any())
+                    {
+                        // Создаем запись в таблице History
+                        var historyItem = new Historys
+                        {
+                            data = DateTime.Now.ToString(), // Текущая дата и время
+                            itemName = string.Join(", ", cartItems.Select(item => item.name)), // Список имен продуктов
+                            price = sum, // Общая сумма
+                            status = "accept", // Устанавливаем статус "accept"
+                            usersId = SharedData.Id 
+                        };
+
+                        contextHistory.History.Add(historyItem);
+
+                        // Устанавливаем state = 0 для всех продуктов в корзине
+                        foreach (var item in cartItems)
+                        {
+                            item.state = 0;
+                        }
+
+                        contextItem.SaveChanges();
+                        contextHistory.SaveChanges();
+
+                        // Очищаем коллекцию продуктов и обновляем отображение
+                        Product.Clear();
+                        sum = 0;
+                        sumPriceText.Content = "Total: " + sum + "$";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cart is empty", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+            }
         }
+
+
     }
 
 

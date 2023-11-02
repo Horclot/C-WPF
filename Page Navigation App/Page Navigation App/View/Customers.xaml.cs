@@ -15,21 +15,35 @@ using System.Windows.Shapes;
 
 namespace Page_Navigation_App.View
 {
-    /// <summary>
-    /// Interaction logic for Customers.xaml
-    /// </summary>
+    
     public partial class Customers : UserControl
     {
         public Customers()
         {
             InitializeComponent();
-            int idFromWindow1 = SharedData.Id;
-            string id = idFromWindow1.ToString();
             string name = SharedData.Name;
             string email = SharedData.Email;
             TextName.Content = "Name: " + name;
             TextEmail.Content = "Email: " + email;
             textId.Content = "id: " + SharedData.Id;
+
+            
+            using (var context = new ApplicationDbHistory())
+            {
+                // Подсчет количества покупок
+                int purchaseCount = context.History
+                    .Where(history => history.usersId == SharedData.Id)
+                    .Count();
+
+                // Подсчет общей потраченной суммы
+                decimal totalSpent = context.History
+                    .Where(history => history.usersId == SharedData.Id)
+                    .Sum(history => history.price);
+
+                // Обновление соответствующих элементов на форме
+                SumItem.Content = "Total Spent: $" + totalSpent.ToString("0.00");
+                Quantity.Content = "Purchase Count: " + purchaseCount;
+            }
         }
     }
 }

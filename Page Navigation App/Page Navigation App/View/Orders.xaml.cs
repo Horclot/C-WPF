@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,31 @@ namespace Page_Navigation_App.View
     /// </summary>
     public partial class Orders : UserControl
     {
+        public ObservableCollection<Historys> PurchaseHistory { get; set; }
         public Orders()
         {
             InitializeComponent();
+            PurchaseHistory = new ObservableCollection<Historys>();
+
+            using (var context = new ApplicationDbHistory())
+            {
+                // Здесь вы извлекаете записи из таблицы History, где UsersId соответствует SharedData.Id
+                var userPurchaseHistory = context.History.Where(history => history.usersId == SharedData.Id).ToList();
+
+                // Преобразуете записи из таблицы в объекты HistoryItem и добавляете их в PurchaseHistory
+                foreach (var historyItem in userPurchaseHistory)
+                {
+                    PurchaseHistory.Add(new Historys
+                    {
+                        data = historyItem.data,
+                        itemName = historyItem.itemName,
+                        price = historyItem.price,
+                        status = historyItem.status,
+                        usersId = SharedData.Id
+                    }); ;
+                }
+            }
+            DataContext = this;
         }
     }
 }

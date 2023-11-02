@@ -40,7 +40,7 @@
     </UserControl.DataContext>
 
     <Grid Margin="15">
-        <ItemsControl ItemsSource="{Binding Product}" Margin="57,118,57,103">
+        <ItemsControl ItemsSource="{Binding Product}" Margin="79,100,79,128">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel Orientation="Horizontal" />
@@ -60,8 +60,9 @@
             </ItemsControl.ItemTemplate>
         </ItemsControl>
         <Button Content="Design" HorizontalAlignment="Center" Margin="0,516,0,0" VerticalAlignment="Top" Height="44" Width="152" Style="{StaticResource BuyButtonStyle}" Click="Button_Click" />
-        <Label Content="Your application will consist of these parameters" HorizontalAlignment="Center" Margin="0,83,0,0" VerticalAlignment="Top" Foreground="#FF0BCDFF" FontSize="15"/>
-        <Label Content="Your cart" HorizontalAlignment="Center" Margin="0,28,0,0" VerticalAlignment="Top" Foreground="#FF0BCDFF" FontSize="24"/>
+        <Label Content="Your application will consist of these parameters" HorizontalAlignment="Center" Margin="0,65,0,0" VerticalAlignment="Top" Foreground="#FF0BCDFF" FontSize="15" FontFamily="Rubik"/>
+        <Label Content="Your cart" HorizontalAlignment="Center" Margin="0,18,0,0" VerticalAlignment="Top" Foreground="#FF0BCDFF" FontSize="24" FontFamily="Rubik"/>
+        <Label x:Name="sumPriceText" Content="sum" HorizontalAlignment="Center" Margin="0,447,0,0" VerticalAlignment="Top" Foreground="#FF0BCDFF" FontSize="24" FontFamily="Rubik" BorderBrush="#FF0BCDFF"/>
 
     </Grid>
 </UserControl>
