@@ -12,9 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\diana\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\diana\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Users\\horcl\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\horcl\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Reflection.NullabilityInfoContext.IsSupported": true,
