@@ -6,7 +6,7 @@
     <RootNamespace>Page_Navigation_App</RootNamespace>
     <Nullable>disable</Nullable>
     <UseWPF>true</UseWPF>
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>

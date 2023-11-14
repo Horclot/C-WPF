@@ -40,7 +40,7 @@
     </UserControl.DataContext>
 
     <Grid Margin="15">
-        <ItemsControl ItemsSource="{Binding Product}" Margin="79,100,79,128">
+        <ItemsControl ItemsSource="{Binding Product}" Margin="53,105,53,123">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel Orientation="Horizontal" />
