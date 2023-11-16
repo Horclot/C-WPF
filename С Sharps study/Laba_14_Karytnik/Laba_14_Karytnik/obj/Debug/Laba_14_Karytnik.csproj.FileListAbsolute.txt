@@ -1,0 +1,7 @@
+D:\project\Laba_14_Karytnik\Laba_14_Karytnik\bin\Debug\Laba_14_Karytnik.exe.config
+D:\project\Laba_14_Karytnik\Laba_14_Karytnik\bin\Debug\Laba_14_Karytnik.exe
+D:\project\Laba_14_Karytnik\Laba_14_Karytnik\bin\Debug\Laba_14_Karytnik.pdb
+D:\project\Laba_14_Karytnik\Laba_14_Karytnik\obj\Debug\Laba_14_Karytnik.csproj.AssemblyReference.cache
+D:\project\Laba_14_Karytnik\Laba_14_Karytnik\obj\Debug\Laba_14_Karytnik.csproj.CoreCompileInputs.cache
+D:\project\Laba_14_Karytnik\Laba_14_Karytnik\obj\Debug\Laba_14_Karytnik.exe
+D:\project\Laba_14_Karytnik\Laba_14_Karytnik\obj\Debug\Laba_14_Karytnik.pdb
