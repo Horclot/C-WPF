@@ -486,3 +486,4 @@ C:\Users\horcl\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App
 C:\Users\horcl\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\bin\Debug\net6.0-windows\Humanizer.dll
 C:\Users\horcl\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\horcl\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\bin\Debug\net6.0-windows\Mono.TextTemplating.dll
+C:\Users\horcl\OneDrive\Рабочий стол\GitHub\C-WPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\Page Navigation App.sourcelink.json
